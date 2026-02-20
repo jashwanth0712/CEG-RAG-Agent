@@ -16,6 +16,8 @@
     "db:check": "drizzle-kit check"
   },
   "dependencies": {
+    "@ai-sdk/google": "^3.0.30",
+    "@ai-sdk/groq": "^3.0.24",
     "@ai-sdk/react": "^3.0.96",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-dropdown-menu": "^2.1.1",

@@ -44,7 +44,7 @@ A retrieval-augmented generation (RAG) agent that can store and retrieve informa
 1. Add your database URL and AI Gateway key to `.env`:
    ```
    DATABASE_URL=your-neon-database-url
-   AI_GATEWAY_API_KEY=your-vercel-ai-gateway-key
+   GROQ_API_KEY=your-vercel-ai-gateway-key
    ```
 2. Run `pnpm install`
 3. Run `pnpm db:migrate` (initial migration)

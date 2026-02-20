@@ -1,5 +1,6 @@
 // Step 4 - Chat API route: the AI agent with tools for adding and retrieving knowledge
 import { createResource } from '@/lib/actions/resources';
+import { groq } from '@ai-sdk/groq';
 import {
   convertToModelMessages,
   streamText,
@@ -17,8 +18,8 @@ export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
 
   const result = streamText({
-    // Step 4a - Use GPT-4o model via Vercel AI Gateway
-    model: 'openai/gpt-4o',
+    // Step 4a - Use Gemini via AI studio API key 
+    model: groq('moonshotai/kimi-k2-instruct-0905'),
     messages: await convertToModelMessages(messages),
     // Step 4b - Allow up to 5 steps so the model can call tools and then summarize the result
     stopWhen: stepCountIs(5),
