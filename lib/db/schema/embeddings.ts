@@ -16,8 +16,8 @@ export const embeddings = pgTable(
     ),
     // Step 1b - The plain text chunk that was embedded
     content: text('content').notNull(),
-    // Step 1c - The vector representation (1536 dimensions for OpenAI ada-002 model)
-    embedding: vector('embedding', { dimensions: 1536 }).notNull(),
+    // Step 1c - The vector representation (384 dimensions for HuggingFace all-MiniLM-L6-v2 model)
+    embedding: vector('embedding', { dimensions: 384 }).notNull(),
   },
   table => ({
     // Step 1d - HNSW index for fast cosine similarity searches on the embedding column
